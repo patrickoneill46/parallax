@@ -1,6 +1,7 @@
 body {
-  color: #787878;
+  color: @offwhite;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  mragin: 0;
 }
 
 h1 {
@@ -8,98 +9,127 @@ h1 {
 }
 
 h1,h2,h3 {
-  color: #A944ED;
+  color: @mauve;
 }
 
 /* ============================================================
   PRIMARY STRUCTURE
-============================================================ */
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-}
+  ============================================================ */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
 /* ============================================================
   SECTIONS
-============================================================ */
-section {
+  ============================================================ */
+  section {
+
     box-shadow: white 0px 0px 25px 10px inset;
-}
-section.module:last-child {
-  margin-bottom: 0;
-}
-section.module h2 {
-  margin-bottom: 40px;
-  font-family: "Roboto Slab", serif;
-  font-size: 30px;
-}
-section.module p {
-  margin-bottom: 40px;
-  font-size: 16px;
-  font-weight: 300;
-}
-section.module p:last-child {
-  margin-bottom: 0;
-}
-section.module.content {
-  padding: 40px 0;
-}
-section.module.parallax {
-  height: 600px;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  border-radius: 8px;
-  position: relative;
-}
-section.module.parallax h2 {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 48px;
-  /*line-height: 600px;*/
-  font-weight: 700;
-  /*text-align: center;*/
-  text-transform: uppercase;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  margin: 0;
-}
 
-section.module.parallax h1:before, section.module.parallax h2:before {
-  
-}
+    &.module:last-child {
+      margin-bottom: 0;
+    }
 
-section.module.exterior {
-  background-image: url("/img/exterior.jpg");
-}
-section.module.garden {
-  background-image: url("/img/garden.jpg");
-}
-section.module.storm {
-  background-image: url("/img/storm.jpg");
-}
-section.module.interior {
-  background-image: url("/img/interior.jpg");
-}
-section.module.bedroom {
-  background-image: url("/img/bedroom.jpg");
-}
+    &.module {
+      &.content .container {
+        padding: 0 10px;
+      }
 
-@media all and (min-width: 600px) {
-  section.module h2 {
-    font-size: 42px;
+      &.content {
+        padding: 40px 0;
+
+        h2 {
+          margin-bottom: 40px;
+          font-family: "Roboto Slab", serif;
+          font-size: 30px;
+        }
+
+        p {
+          margin: 0 0 40px 0;
+          font-size: 16px;
+          font-weight: 300;
+
+          em {
+            font-style: normal;
+            font-size: 2em;
+            color: @mauve;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &.parallax {
+        height: 600px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        border-radius: 8px;
+        position: relative;
+
+        h2 {
+          color: rgba(255, 255, 255, 0.8);
+          font-size: 48px;
+          /*line-height: 600px;*/
+          font-weight: 700;
+          /*text-align: center;*/
+          text-transform: uppercase;
+          text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate3d(-50%, -50%, 0);
+          margin: 0;
+        }
+
+        h1:before, section.module.parallax h2:before {
+
+        }
+      }
+
+      &.exterior {
+        background-image: url("@{imgDir}/exterior.jpg");
+      }
+      &.garden {
+        background-image: url("@{imgDir}/garden.jpg");
+      }
+      &.storm {
+        background-image: url("@{imgDir}/storm.jpg");
+      }
+      &.interior {
+        background-image: url("@{imgDir}/interior.jpg");
+      }
+      &.bedroom {
+        background-image: url("@{imgDir}/bedroom.jpg");
+      }
+    }
+
   }
-  section.module p {
-    font-size: 20px;
+
+  @media all and (min-width: 600px) {
+    section.module {
+      h2 {
+        font-size: 42px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+
+      &.parallax h1 {
+        font-size: 96px;
+      }
+    }
   }
-  section.module.parallax h1 {
-    font-size: 96px;
+  @media all and (min-width: 960px) {
+    section.module{
+      .parallax{
+        h1 {
+          font-size: 160px;
+        }
+      }
+    }
   }
-}
-@media all and (min-width: 960px) {
-  section.module.parallax h1 {
-    font-size: 160px;
-  }
-}
