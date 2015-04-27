@@ -2,11 +2,11 @@ body {
   color: #787878;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
-h1,
-h2,
-h3 {
+
+h1,h2,h3 {
   color: #A944ED;
 }
+
 /* ============================================================
   PRIMARY STRUCTURE
 ============================================================ */
@@ -18,7 +18,7 @@ h3 {
   SECTIONS
 ============================================================ */
 section {
-  box-shadow: white 0px 0px 25px 10px inset;
+    box-shadow: white 0px 0px 25px 10px inset;
 }
 section.module:last-child {
   margin-bottom: 0;
@@ -60,7 +60,14 @@ section.module.parallax h1 {
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
   margin: 0;
+
 }
+
+section.module.parallax h1:before, section.module.parallax h2:before {
+  
+}
+
+
 section.module.exterior {
   background-image: url("exterior.jpg");
 }
@@ -76,6 +83,7 @@ section.module.interior {
 section.module.bedroom {
   background-image: url("bedroom.jpg");
 }
+
 @media all and (min-width: 600px) {
   section.module h2 {
     font-size: 42px;
@@ -92,4 +100,3 @@ section.module.bedroom {
     font-size: 160px;
   }
 }
-/*# sourceMappingURL=styles.css.map */
