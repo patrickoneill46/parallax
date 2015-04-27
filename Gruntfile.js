@@ -13,7 +13,7 @@ module.exports = function(grunt){
 		less: {
 			development: {
 				files: {
-		          "styles.css": "less/index.less"
+		          "css/styles.css": "less/index.less"
 		        },
 		        options: {
 		          sourceMap: true,

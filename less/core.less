@@ -3,6 +3,10 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
+h1 {
+  text-align: center;
+}
+
 h1,h2,h3 {
   color: #A944ED;
 }
@@ -45,9 +49,10 @@ section.module.parallax {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  border-radius: 8px;
   position: relative;
 }
-section.module.parallax h1 {
+section.module.parallax h2 {
   color: rgba(255, 255, 255, 0.8);
   font-size: 48px;
   /*line-height: 600px;*/
@@ -60,28 +65,26 @@ section.module.parallax h1 {
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
   margin: 0;
-
 }
 
 section.module.parallax h1:before, section.module.parallax h2:before {
   
 }
 
-
 section.module.exterior {
-  background-image: url("exterior.jpg");
+  background-image: url("/img/exterior.jpg");
 }
 section.module.garden {
-  background-image: url("garden.jpg");
+  background-image: url("/img/garden.jpg");
 }
 section.module.storm {
-  background-image: url("storm.jpg");
+  background-image: url("/img/storm.jpg");
 }
 section.module.interior {
-  background-image: url("interior.jpg");
+  background-image: url("/img/interior.jpg");
 }
 section.module.bedroom {
-  background-image: url("bedroom.jpg");
+  background-image: url("/img/bedroom.jpg");
 }
 
 @media all and (min-width: 600px) {
